@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.github.esrrhs/fakescript-java -->
         <dependency>
             <groupId>com.github.esrrhs</groupId>
             <artifactId>fakescript-java</artifactId>
