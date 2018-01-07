@@ -59,22 +59,52 @@ public class Test
         }
 
         fk.run(f, "cttest.test1");
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
 
         A a = new A();
         a = (A) fk.run(f, "testA", a);
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
         System.out.println("run testA ret " + a);
 
         a = new B();
         ret = (int) (double) (Double) fk.run(f, "testB", a);
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
         System.out.println("run testB ret " + ret);
 
         fk.run(f, "testHotUpdate");
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
         System.out.println("run testHotUpdate");
         fk.run(f, "testHotUpdate");
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
         System.out.println("run testHotUpdate");
 
         long begin = System.currentTimeMillis();
         ret = (int) (double) (Double) fk.run(f, "test_prime");
+        if (fk.error(f))
+        {
+            System.out.println("run fail");
+            return;
+        }
         System.out.println("run test_prime ret " + ret + " " + (System.currentTimeMillis() - begin));
 
         System.out.println(fk.dumpprofile(f));
