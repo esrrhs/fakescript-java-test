@@ -59,4 +59,19 @@ public class A
 	{
 		return null;
 	}
+
+	public void a6(int a)
+	{
+		System.out.println("a6 int " + a);
+	}
+
+	public void a6(int a, int b)
+	{
+		System.out.println("a6 int int " + a + " " + b);
+	}
+
+	public void a6(int a, String b)
+	{
+		System.out.println("a6 int String " + a + " " + b);
+	}
 }

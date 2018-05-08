@@ -17,6 +17,11 @@ end
 
 func testA(arg)
 
+	arg:a6(1)
+	arg:a6(2, 2)
+	arg:a6(3, "abc")
+	arg:a6(4, null)
+
 	bbb := new("test.B")
 	bbb:a1(123)
 
