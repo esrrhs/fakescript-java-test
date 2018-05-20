@@ -15,8 +15,6 @@ public class Test
         fake f = fk.newfake(config);
 
         // 多种绑定
-        fk.reg(f, "test");
-        fk.regall(f, "test");
         fk.regclass(f, A.class);
         fk.regclass(f, B.class);
         fk.regclass(f, java.util.ArrayList.class);

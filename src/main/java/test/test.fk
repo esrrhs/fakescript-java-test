@@ -3,7 +3,34 @@ include "testop.fk"
 
 const test = ["a" "b" "c"]
 
+func testMax(a, c, b)
+
+	tmpfan := a
+
+	if tmpfan > b then
+		b = tmpfan
+	end
+
+	return b
+
+end
+
 func testA(arg)
+
+	arg:a6(1)
+	arg:a6(2, 2)
+	arg:a6(3, "abc")
+	arg:a6(4, null)
+
+	bbb := new("test.B")
+	bbb:a1(123)
+
+	b := 1
+	b = testMax(1, 1, b)
+	b = testMax(10, 1, b)
+	b = testMax(2, 1, b)
+	b = testMax(12, 1, b)
+	print("testMax ", b)
 
 	print(" ", cttest.ct_pass)
 
