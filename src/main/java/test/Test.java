@@ -14,7 +14,7 @@ public class Test
         config.open_debug_log = 0;
         fake f = fk.newfake(config);
 
-        // ¶àÖÖ°ó¶¨
+        // å¤šç§ç»‘å®š
         fk.reg(f, "test");
         fk.regall(f, "test");
         fk.regclass(f, A.class);
