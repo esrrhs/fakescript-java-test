@@ -17,10 +17,21 @@ end
 
 func testA(arg)
 
+    scoreMap := map()
+    for i := 1, i <= 3, i++ then
+        scoreMap[i] = 0
+    end
+    print(scoreMap)
+    for i := 1, i <= 3, i++ then
+
+         scoreMap[i] = scoreMap[i] + i
+
+    end
+    print(scoreMap)
+
 	arg:a6(1)
 	arg:a6(2, 2)
 	arg:a6(3, "abc")
-	arg:a6(4, null)
 
 	bbb := new("test.B")
 	bbb:a1(123)
